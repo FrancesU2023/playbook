@@ -8,4 +8,11 @@ set -e
 cd "$(dirname "$0")/.."
 
 echo "==> Linting files..."
-npm run lint
+if [ -n "$1" ]; then
+  # pass arguments to standard. This is useful for checking a single JavaScript file, 
+  # or a directory using the glob pattern. You can also pass in --fix to fix 
+  # lint errors.
+  npx standard "$@"
+else
+  npx standard
+fi
