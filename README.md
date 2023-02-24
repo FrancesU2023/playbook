@@ -65,7 +65,7 @@ Alternatively you can run standalone linting checks by running `npm run lint`, o
 
 E.g.
 ```
-npm run lint "src/_webpack/**/*.js"
+npm run lint "src/_webpack/search.js"
 ```
 
 ## Licence
