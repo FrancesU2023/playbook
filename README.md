@@ -55,16 +55,17 @@ bundle exec htmlproofer _site
 
 ### Code style
 
-[JavaScript Standard Style](https://standardjs.com/) is the authority on style for JavaScript files. This is enforced on pull requests to the main branch. Linting is run across all files as part of the test script.
+This project uses [JavaScript Standard Style](https://standardjs.com/) to enforce consistent style. This is enforced on pull requests to the main branch. Linting is run across all JavaScript files as part of the test script.
 
 ```
 script/test
 ```
 
-Or alternatively you can run standalone linting checks by running
+Alternatively you can run standalone linting checks by running `npm run lint`, or fix files using `npm run lint:fix`. Specific files and directories written in the glob pattern can be passed as optional arguments to either script when surrounded by quotes.
 
+E.g.
 ```
-npm run lint
+npm run lint "src/_webpack/**/*.js"
 ```
 
 ## Licence
